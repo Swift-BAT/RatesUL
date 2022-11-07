@@ -1,0 +1,8 @@
+In this repository so far:
+- calc_BAT_ul.py: given a lightcurve, compute the flux upper limit assuming the Band model
+- GettingFluxUpperLimits_fromBATrates.ipynb: notebook for the above
+- Group_meetings.ipynb: our discussions from Monday Group_meetings
+
+Milena needs to do the following (Nov 7):
+- integrate the code for extraction of lightcurves & binning (currently done through Goddard machines)
+- integrate plotting snippets of code 
