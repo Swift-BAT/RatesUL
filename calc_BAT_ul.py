@@ -3,6 +3,10 @@ from astropy.table import Table, vstack
 import matplotlib.pyplot as plt
 import os
 
+cwd = os.getcwd()
+
+drm_dir_old = cwd+'/rsp_maskweight/'
+drm_dir_nitrates = cwd+'/rsp_NITRATES/'
 
 # comptomized and band spectra functions
 # E is photon energy, A is normalization, E0 is pivot energy
@@ -240,9 +244,7 @@ def rate2band_eflux(rate, resp_mat, Elos, Ehis, alpha, beta, Epeak, Emin, Emax):
     flux = get_band_eflux(Emin, Emax, A, alpha, beta, Epeak)
     return flux
 
-    # change these paths to where your response files are
-drm_dir_old = '/Users/mcrnogor/Desktop/swift_rsp_files/'
-drm_dir_nitrates = '/Users/mcrnogor/Desktop/rsp_new/'
+
 
 def get_drm_tab(grid_id, old=False, get_ebounds=False):
 
