@@ -1,0 +1,38 @@
+## This is a temporary file to store intermediate info of the script
+pass_data_dir: /local/data/bat2/pass_data/2020
+att_folder: /local/data/bat2/transient_monitor/attitude
+Swift_pointing_folder: /local/data/bat2/batusers/batgroup/BAT_GW/Swift_pointing
+LIGO_notice_folder: /local/data/bat2/batusers/batgroup/BAT_GW/LIGO_notice
+source_name: GW200112_155838
+T0_input: 2020-01-12T15:58:38
+T0_input_flag: UTC
+T0: 600537542.25
+Year: 2020
+Month: 01
+Day: 12
+DOY: 012
+time_UTC: 2020-01-12T15:58:38 UTC
+pass_data_flag: 7
+src_RA: 0.0
+src_DEC: 0.0
+search_time_window: 30.0
+output_dir: /local/data/bat1/batusers/mcrnog/results/GW200112_155838
+input_img: /local/data/bat1/batusers/mcrnog/results/O3b/IGWN-GWTC3p0-v1-GW200112_155838_PEDataRelease_cosmo_reweight_C01:Mixed.fits
+input_img_Phil: NONE
+healpy_flag: 0
+source_select_flag: 0
+Earth_RA: 105.927635
+Earth_DEC: 18.619223
+BAT_RA: 319.23399898337846
+BAT_DEC: 20.0597162685828
+BAT_ROLL: 213.1244354248047
+flag_att: 1
+input_src_pcode: 0.377001783758
+input_src_FOV_flag: 1
+BAT_FOV_img: /local/data/bat1/batusers/mcrnog/results/GW200112_155838/batfov.fits
+FOV_plot: bat_fov.png
+flag_quad_rate: 1
+flag_ms_rate: 1
+flag_1s_rate: 1
+Number_of_good_detector: 15396
+Flux limit calculartion exceeding 50 iteration, do sim_sGRB_count.sh manually.
