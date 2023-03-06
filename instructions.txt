@@ -1,0 +1,33 @@
+(MC March 6, 2023) This document provides instructions re: how I calculated upper limits for the Swift/GBM paper.
+
+1. Searching the for coincidental detection with the GW trigger.
+
+To search for the overlapping region between the GW probability map and BAT's FoV, I run
+transient_search.sh; e.g.
+./transient_search.sh S190510g 2019-05-10T02:59:39.292 UTC 0.0 0.0 path/to/S190510g/bayestar.fits.gz path/to/S190510g/bayestar_convolved.fits.gz"
+
+This is a script modified from ***Amy Lien's*** original code in https://arxiv.org/abs/1311.4567. I ran it on BAT machines
+at Goddard---however, I only use this code to search for coincidental detections with the GW trigger and the extraction
+of lightcurves. All the scripts that this code calls for are under the directory 'scripts'. Those are Amy Lien's work,
+with minimal modifications from me.
+
+The input for transient_search.sh is as follows:
+"./transient_search.sh source_name T0 T0_type src_RA src_DEC input_img input_img_Phil"
+source_name: the source name. This will be the folder name in the result directory
+T0: enter either UTC or Swift MET
+T0_type: enter the word "UTC" or "MET", depends on which T0 you entered.
+src_RA: RA for an input source to be searched in the event data.
+src_DEC: DEC for an input source to be searched in the event data
+input_img: LIGO probability map. Enter "NONE" if unavailable.
+input_ima_Phil: covolved LIGO map with nearby galaxies. Enter "NONE" if unavailable.
+
+
+***This script relies on the data downloaded to the BAT machines. If to be done on another machine, you have to manually
+put in the path to the relevant data and pointing files.***
+
+When running transient_search.sh, a lockfile “transient_search_running” is created in the results directory.
+If something goes wrong, you can check what's going on in there.
+
+If run successfully, this script produces the raw lightcurves needed for the next step.
+
+2.  Run the notebook --> /GettingFluxUpperLimits_fromBATrates.ipynb.
